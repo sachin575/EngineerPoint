@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Pneumatics Engineer's Point</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;700&display=swap" rel="stylesheet">
+    <title>Hydraulics Engineer's Point</title>
+    <style>
+        *{
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+        }
+        textarea{
+            resize: none;
+            margin: 5px auto;
+            height: 50px;
+            width: 100px;
+        }
+        input{
+            margin: 2px;
+            max-width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark fs-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">ENGINEER POINT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="mechanical.html">Mechanical</a></li>
+                            <li><a class="dropdown-item" href="electrical.html">Electrical</a></li>
+                            <li><a class="dropdown-item" href="hydraulics.html">Hydraulics</a></li>
+                            <li><a class="dropdown-item" href="pneumatics.html">Pneumatics</a></li>
+                            <li><a class="dropdown-item" href="electropneumatics.html">Electroneumatics</a></li>
+                        </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="calculation.html">Calculate</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="questions.html">Ques&Ans</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark fs-6">
+        <div class="col-md-6 px-0">
+                <p>Hello all !!! <br>
+                    I welcome you all to Engineers Point Pneumatics page. Pneumatics play important role in automation.
+                    Many a
+                    times pneumatics is used as drive unit for automation system. If you follow the content of this page
+                    you will
+                    be able to design pure pneumatic Circuits and also make automation with ease. You can also see
+                    topics like
+                    <a href="#components">Pneumatic control elements</a>, <a href="#advantages">Pneumatic Advantages and disadvantages</a>, <a
+                        href="#circuit">Pneumatic circuit</a>,
+                    <a href="#cyinder_force_calculation">Cylinder Force calculation</a> etc. So make sure you read these topic and get you
+                    problems solved.
+                </p>
+        </div>
+    </div>
+    <div class="container" style="max-width: 600px; height: auto;">
+        <!-- Caption -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1510467181625-c419e443bdfa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODZ8fHByZXNzdXJlJTIwZ2F1Z2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                        class="d-block w-100" alt="..." style="width: auto; max-height: 300px;">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                        <h5>Material Science</h5>
+                        <button type="button" class="btn btn-success">Classification</button>
+                        <button type="button" class="btn btn-danger">Alluminium</button>
+                        <button type="button" class="btn btn-info">Steel</button>
+                        <button type="button" class="btn btn-warning">Plastic</button>
+                    </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2017/03/15/20/27/pneumatics-2147365__340.jpg"
+                        class="d-block w-100" alt="..." style="width: auto; max-height: 350px;">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                        <h5>Production Technology</h5>
+                        <button type="button" class="btn btn-success">Drilling</button>
+                        <button type="button" class="btn btn-danger">Milling</button>
+                        <button type="button" class="btn btn-warning">Turning</button>
+                        <button type="button" class="btn btn-info">Coolants</button>
+                    </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2020/06/05/17/01/cylinder-5263820__340.jpg"
+                        class="d-block w-100" alt="..." style="width: auto; max-height: 300px;">
+                    <!-- <div class="carousel-caption d-none d-md-block">
+                        <h5>Welding</h5>
+                        <button type="button" class="btn btn-success">Arc Welding</button>
+                        <button type="button" class="btn btn-danger">Gas Welding</button>
+                        <button type="button" class="btn btn-warning">Brazing</button>
+                        <button type="button" class="btn btn-info">Gas Cutting</button>
+                    </div> -->
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="accordion my-5" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed type=" button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTolerance" aria-expanded="false" aria-controls="collapseTwo">
+                        Basics
+                    </button>
+                </h2>
+                <div id="collapseTolerance" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Pneumatic system work on compressed pneumatic air. This compressed is
+                            used in pneumatic cylinder, motors and other drives.
+                            Pneumatic Cylinder is of low cost and very easy for installation. It has simple construction
+                            and
+                            available
+                            in various dimensions.
+                            This cylinder is used in machines for clamping, shifting, positioning, material flow
+                            branching, etc.
+                            Other applications include packaging, filing, locking, sorting, stamping, and many more.
+                            Machine like CNC, Drilling, Turning, Sawing, Forming use pneumatic system widely.
+                            The Advantages and disadvantages of pnuematic system are defined below:
+                        <p>
+                        <h4>Selection criteria for Pneumatic Actuators.</h4>
+                        <li>Force</li>
+                        <li>Stroke length</li>
+                        <li>Safety and reliability</li>
+                        <li>Types of motion</li>
+                        <li>Speed</li>
+                        <li>Controllability</li>
+                        <li>Storage</li>
+                        <li>Energy costs</li>
+                        <li>Service life</li>
+                        </p>
+                        <h4>Pneumatic System oerview</h4>
+                        <li>Supply elements (Compressor, FRL)</li>
+                        <li>Signalling Elements (Pushbuttons, levers) </li>
+                        <li>Processing Elements (and gate, or gates)</li>
+                        <li>Adjusting Components (Direction control valves)</li>
+                        <li>Power Output(Motor, cylinders)</li>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFits" aria-expanded="false" aria-controls="collapseTwo" id="advantages">
+                        Advantages & Disadvantages
+                    </button>
+                </h2>
+                <div id="collapseFits" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h4>Advantages</h4>
+                        <li>Air is available everywhere and in unlimited amount.</li>
+                        <li>Air can be transported in pipelines easily.</li>
+                        <li>Its is economical.</li>
+                        <li>Compressed air can be stored in a reservoir and used when required. The reservoir itself can
+                            be
+                            transported.
+                        </li>
+                        <li>It is relatively insensitive to temperature.</li>
+                        <li>There are no risek of fire explosion</li>
+                        <li>If the pneumatic air is not lubricated it is clean and does not contaminates eenvironment.
+                        </li>
+                        <li>Compressed air componenets have high working speed</li>
+                        <h4>Disadvantages</h4>
+                        <li>Compressed air need good preparation. Dirt and other contaminated particle should be
+                            removed.</li>
+                        <li>The force available from pneumatics is up to 50,000Newtons only.</li>
+                        <li>The exhaust are loud.</li>
+                        <li>Low accuracy</li>
+                        <li>Low loading</li>
+                        <li>Uneven moving speed.</li>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseDrilling" aria-expanded="false" aria-controls="collapseTwo" id="components">
+                        Pneumatic Components
+                    </button>
+                </h2>
+                <div id="collapseDrilling" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Pneumatic components can be classified into supply elements, signal elements, processing
+                            element,
+                            adjusting elements and power outputs.
+                            Pneumatic componenets are designed for maximun operating pressure of 8 to 10bar. There are
+                            some
+                            pressure
+                            loss from distribution system till operating
+                            system, hence we get 6 to 7 bar pressure.
+                        <h4>Supply Elements</h4>
+                        <p>Supply element are compressors where the air is prepared. The air from environment is cleaned
+                        </p>
+                        <p>Another supply element type is FRL(Filter Regulator Lubricator ). It's main task is to filter
+                            the air
+                            coming from resrvoirs or compressor. It also regulates the pressure and adds some oil for
+                            lubricating
+                            the pneumatic components. Here it
+                            also performs the task of regulator as well as lubricator.
+                        </p>
+                        <p>Symbol of pneumatic FRL is as below:
+                            <img class="featurette-image img-fluid mx-auto" src="frl1.JPG" alt="FRL_1"
+                                style="height: 300px;">
+                            <img class="featurette-image img-fluid mx-auto" src="frl2.JPG" alt="FRL_2"
+                                style="height: 200px;"><img
+                                class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                src="frl2_standard.JPG" alt="FRL_2" style="height: 200px;">
+                            <img class="featurette-image img-fluid mx-auto" src="simplified frl.JPG"
+                                alt="Simplified FRL" style="height: 100px;">
+                        </p>
+                        </p>
+                    </div>
+                    <div>
+                        <h4>Pneumatic Valves</h4>
+                        <p>Pneumatic valves are used to control the pressure or flow rate of pressure media.
+                            Depending on structure valves are classified as Directiob Control Valves (DCV),
+                            Non-return valves, Flow control valves, Pressure control valves, shut-off valves.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Direction Control Valves</h3>
+                        <p>Pneumatic direction control valves control the flow of air signal and perform task of
+                            generating,
+                            cancelling, of directing signals.</p>
+                        <p>One can decribe valves as:
+                            <li>Number of ports or openings <p>The image below has its ports marked. Three ports are
+                                    circled red
+                                    in
+                                    color.</p>
+                                <img src="3by2ports.JPG" alt="3/2valves ports marked">
+                            </li>
+                            <li>Normally opened or close</li>
+                            <img src="normally closed.JPG" alt="nolmally close">
+                            <img src="normally opne.JPG" alt="nolmally open">
+
+                            <li>Numbers of position <p>
+                                    In below images you can see the square marking of images define the positions of
+                                    valve. One
+                                    images has 2 positions and other has 3.
+                                </p>
+                            </li>
+                            <img src="5by2position.JPG" alt="">
+                            <img src="5by3position.JPG" alt="">
+                            <li>Actuation method</li>
+                            <img src="detente swith actuated.JPG" alt="Detent switch actuated">
+                            <img src="push btn actuated.JPG" alt="Push Button actuated">
+                            <img src="roller actuated.JPG" alt="Roller actuated">
+                            <img src="pneumatically actuated.JPG" alt="pneumatically actuated">
+                            <li>Return actuatiPneumatic/on method</li>
+                            <img src="return actuation1.JPG" alt="return actuation by spring">
+                            <img src="return actuation2.JPG" alt="pneumaticalyy return actuated">
+                        </p>
+                        <h4>Components and their description</h4>
+                        <div id="component_table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Symbol</th>
+                                        <th>Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="special_components"><img class="img-thumbnail img-fluid"
+                                                class="featurette-image img-fluid mx-auto"
+                                                style="height: auto; width: 100px;" src="compressed air supply.JPG"
+                                                alt="compressed air supply" style="height: auto; width: 100px;"></td>
+                                        <td>Pneumatic supply elements</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" src="air service unit (FRL).JPG"
+                                                alt="air service supply" style="height: auto; width: 100px;"></td>
+                                        <td>Air service unit (FRL)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" src="simplified frl.JPG"
+                                                alt="simplified frl" style="height: auto; width: 100px;"></td>
+                                        <td>Simplified FRL</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid"
+                                                src="singel acting spring return cylinder.JPG"
+                                                alt="singel acting spring return cylinder"
+                                                style="height: auto; width: 100px;"></td>
+                                        <td>singel acting spring return cylinder</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" src="double acting cyinder.JPG"
+                                                alt="double acting cylinder" style="height: auto; width: 100px;"></td>
+                                        <td>Double acting cylinder</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" src="motor.JPG" alt="Pneumatic motor"
+                                                style="height: auto; width: 100px;"></td>
+                                        <td>Pneumatic Motor</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 100px;"
+                                                src="semi_rotary.JPG" alt="semi-rotary">
+                                        </td>
+                                        <td>Semi-rotary</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" src="vaccum_generator.JPG"
+                                                alt="vaccum_generator" style="height: auto; width: 100px;">
+                                        </td>
+                                        <td>Vaccum Generator</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" src="3by2 valve.JPG"
+                                                alt="3/2 way normally open valve" style="height: auto; width: 100px;">
+                                        </td>
+                                        <td>3/2 way normally open direction control valve</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" src="3by2normally closed valve.JPG"
+                                                alt="3/2 way normally closed valve" style="height: auto; width: 100px;">
+                                        </td>
+                                        <td>3/2 way normally closed direction control valve</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" src="5by2detentswitch.JPG"
+                                                alt="5/2 detente switch" style="height: auto; width: 200px;">
+                                        </td>
+                                        <td>5/2 detent switch direction control valve</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="5by2way  memory valve.JPG" alt="5by2way  memory valve"></td>
+                                        <td>5/2 way valve spring return</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="5by2double valve.JPG" alt="5by2way  memory valve">
+                                        </td>
+                                        <td>5/2 way valve</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="and gate.JPG" alt="And gate/Two pressure valve">
+                                        </td>
+                                        <td>And gate/Two pressure valve</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="shuttle valve.JPG" alt="shuttle valve"></td>
+                                        <td>OR gate/shuttle valve</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="check valve.JPG" alt="check valve"></td>
+                                        <td>check valve</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="counter.JPG" alt="counter"></td>
+                                        <td>Counter</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="offdelaytimer.JPG" alt="off delay timer"></td>
+                                        <td>Off delay timer</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="ondelaytime.JPG" alt="on delay timer">
+                                        </td>
+                                        <td>On delay timer</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="one way trip lever.JPG" alt="one way trip lever">
+                                        </td>
+                                        <td>One way trip lever</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="oneway flow control valve.JPG" alt="one way flow control valve">
+                                        </td>
+                                        <td>One way flow control valve</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="quick exhaust valve.JPG" alt="quick exhaust valve"></td>
+                                        <td>Quick Exhaúst Valve</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="roller_switch.JPG" alt="roller"></td>
+                                        <td>Roller switch</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="img-thumbnail img-fluid" style="height: auto; width: 200px;"
+                                                src="stepper module.JPG" alt="stepper module"></td>
+                                        <td>Stepper module</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="circuit">
+                        Circuits
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div>
+                            <img src="basic circuit.JPG" alt="">
+                            <p>
+                                In this basic circuit 3/2pushbutton operated normally closed valve is used
+                                as a signal elements then single acting spring return signal is used as drive elements.
+                                When pushbutton is pressed cylinder extends and as long as button is pressed the
+                                cylinder
+                                remains in extended position. As soon as button is released cylinder retracts to its
+                                home
+                                position.
+                                This circuit can be used where there is no logic circuit and only manual pushbutton is
+                                used
+                                for actuating the cylinder.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Double acting cylinder</h4>
+                            <img src="double acting cylinder circuit.JPG" alt="">
+                            <p>
+                                In this circuit 5/2 detent switch operated valve is used as a signal
+                                element and double acting cylinder is connected to it. Here normally cylinder is
+                                retracted to home position. As detent switch is rotated cylinder extends and remain in
+                                that
+                                position
+                                until detent switch is again rotated to its original position. This circuit can be used
+                                where
+                                you want to lock cylinder in its extended position.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Flow control Valve</h4>
+                            <img src="flow control valve.JPG" alt="">
+                            <p>In this ciruit if you see clearly it's same as for double acting cylinder
+                                circuit, the difference is that flow control valve is added betweeb valve and
+                                cylinder. This is for reducing the cylinder speed. It is One way flow control valve,
+                                used for
+                                controlling
+                                cylinder speed.
+                            </p>
+                            <p>
+                            <h5>How one way flow control valve works?</h5>
+                            When air comes from port 2 the air flow is reduced as there is some throtelling
+                            in the one way flow control. There is a check valve installed parallely to it. When the air
+                            comes
+                            from`
+                            cylinder the the valve is pushed and air coming from cylinder is not controled. Hence it is
+                            called
+                            one
+                            way flow cotrol valve.
+                            </p>
+                            <p>
+                            <h5>Meter In</h5>
+                            <img src="meter in.JPG" alt="Meter_in" srcset="">
+                            When air going in the cylinder is controlled then the one flow control valve is called
+                            meter in.
+                            </p>
+                            <p>
+                            <h5>Meter Out</h5>
+                            <img src="meter out.JPG" alt="Meter_out" srcset="">
+                            When the air going out of the cylinder is controlled then the one way flow control valve is
+                            called meter out.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Pneumatically operated Valves</h4>
+                            <p>For Indirect controlling cylinder or any other actuator, we use pneumatically actuated
+                                valves
+                                their
+                                advantages are as follow:</p>
+                            <li>We can set different pressure for control circuit and for driveing circuit.</li>
+                            <li>Due to this the control circuti componenets are not exposed to high pressure, this
+                                increase
+                                their
+                                lifetime.</li>
+                            <h3>Different types of pneumatically actuated valves</h3>
+                            <li>3/2 spring return valve</li>
+                            <img src="valve2.JPG" alt="valve2">
+                            <li>5/2 pneumaticaly actuated single pilot</li>
+                            <img src="valve1.JPG" alt="valve1" srcset="">
+                            <li>5/3 pneumaticaly actuated</li>
+                            <img src="valve1.JPG" alt="">
+                        </div>
+                        <div>
+                            <h4>Logic operators</h4>
+                            <h3>And Gate</h3>
+                            <img src="andgate.JPG" alt="">
+                            <p>It has three port, 2 for input and 1 for output signal. This valve actuates only when
+                                pressure is
+                                availabel at both the sides. It is also known as two pressure valve</p>
+                            <h3>OR Gate</h3>
+                            <img src="orgate.JPG" alt="">
+                            <p>It has three port, 2 for input and 1 for output signal. This valve give output signal
+                                only when
+                                pressure is available at either one of its side. It is also known as shuttle valve.</p>
+                        </div>
+                        <div>
+                            <h4>Roller switch</h4>
+                            <img src="rollerswitch1.JPG" alt="">
+                            <p>A roller switch is a type of proximity sensor which is used to detect the cylinder
+                                positions.
+                                Roller switches are used for automating the process. In this circuit roller switch
+                                operated
+                                3/2 normally closed valve is used to detect the cylinder most extended position.
+                                Psuhbutton is
+                                pressed
+                                the 5/2 valve is actuated and cylinder extends. As soon as piston reaches to most
+                                extended
+                                position
+                                the roller switch is actuated and it generates signally causing cylinder to retract
+                                cylinder
+                                automatically.
+                                This type of circuit is used when we want to automate the ciruit. The condition be like
+                                if we
+                                press
+                                the button
+                                the cylinde must extend and as it extends to forward most position it must retract
+                                automatically.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Roller switch with 2 cylinders.</h4>
+                            <img src="rollerwith2cylinder.JPG" alt="roller switch with 2 cylinders">
+                            <p>In this circuit 2 roller switch valves are used to create a automated circuit.
+                                Once the button is pressed cylinder extends and then the roller switch 'A1' is
+                                activated. This
+                                causes
+                                cylinder 2 to extend and roller switch 'B1' extends. And relatively first cylinder
+                                retracts. As
+                                'A0'
+                                retracts to home position
+                                second cylinder also retracts.
+                                This kind of circuit can used where two cylinders have to be operated and second
+                                cylinder
+                                follows
+                                third cylinder.
+                            </p>
+                            <p>Look at the circuit below and interpret.</p>
+                            <img src="roller switch with 3 cylinder.JPG" alt="">
+                        </div>
+                        <div>
+                            <h4>On delay Timer</h4>
+                            <img src="ondelaytimer.JPG" alt="">
+                            <p>In this circuit roller switch is used to retract the cylinder with on delay pneumatic
+                                timer
+                                When cylinder is extended then 'A1' roller switch is activated. Then timer gets the
+                                signal for
+                                actuation.
+                                In ondelay timer there is a oneway flow control valve installed. That ensures that the
+                                time set
+                                for
+                                filling the
+                                reservoir is achieved. The controlled flow of pneumatic air is filled in reservoir and
+                                then once
+                                it
+                                is filled then the
+                                valve is activated and signal is achieved after set time delay. In on delay timer the
+                                valve is
+                                normally closed.
+                            </p>
+                        </div>
+                        <div>
+                            <h4>Off delay timer</h4>
+                            <img src="offdelaytimer.JPG" alt="">
+                            <p>In this circuit motor rotates by default. When pushbutton is pressed then the motor </p>
+                            stops after the time set in the timer. The reservoir fills and then the valve actuates
+                            generating
+                            signal.
+                            In off delay timer the valve is normally open.
+                        </div>
+                        <div>
+                            <h4>Pneumatic Latching</h4>
+                            <img src="pneumatic latchin.JPG" alt="">
+                            <li>In this circuit the circuit is automated for multiple cycle once signal is achieved.
+                                For that when 3/2 normally open pushbutton operated switch is operated then automation
+                                circuit
+                                is started. The 3/2 pneumatically operated valve, shuttle valve and a 3/2 normally close
+                                pushbutton
+                                operated
+                                valve is used to latch the pneumatic circuit.
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Advavance Pneumatic
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>A+A-B+B-</strong>
+                        <div class="container" style="max-width: 400px; max-height: auto;">
+                            <div id="a3" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="A3.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="a3.2.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#a3"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#a3"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <strong>A+B+B-A-</strong>
+                        <div class="container" style="max-width: 400px; height: 400px;">
+                            <div id="a2" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="A2.1.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="A2.2.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#a2"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#a2"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <strong>A+B+B-A-C+C-</strong>
+                        <div class="container" style="max-width: 400px; height: 400px;">
+                            <div id="a4" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="a4.1.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="a4.2.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="a4.3.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="a42.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#a4"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#a4"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <strong>A+A-B+B-C+C-</strong>
+                        <div class="container" style="max-width: 400px; height: 400px;">
+                            <div id="a5" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="a5.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="a5.2.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="a5.3.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="a52.JPG" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#a5"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#a5"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree" id="cyinder_force_calculation">
+                        Pneumatic Cylinder Force Calculator
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="form-check">
+                            <input class="form-check-input" onclick="extension_check()" type="checkbox" value=""
+                                id="extension_check">
+                            <label class="form-check-label" for="extension_check">
+                                Calculate Extension Force
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" onclick="retraction_check()" type="checkbox" value=""
+                                id="retraction_check">
+                            <label class="form-check-label" for="retraction_check">
+                                Calculate Retraction Force
+                            </label>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="pressure_input" class="col-sm-2 col-form-label">Pressure Input(bar)</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="pressure_input" >
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="piston_dia" class="col-sm-2 col-form-label">Piston Dia(mm)</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="piston_dia" >
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="piston_rod_dia" class="col-sm-2 col-form-label">Piston Rod Dia(mm)</label>
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" id="piston_rod_dia">
+                            </div>
+                        </div>
+                        <button type="button" onclick="calculate_force()" class="btn btn-success"
+                            id="calculate_vir">Calculate</button>
+                        <div style="margin: 10px auto;">
+
+                            <textarea name="" id="force_ans" style="resize: none; margin: 0px auto; width: 250px; height: 100px;"></textarea>
+                        </div>
+                        <script>
+                            function calculate_force() {
+                                var piston_head = document.getElementById("piston_rod_dia").value;
+                                var pressure_input = document.getElementById("pressure_input").value;
+                                var piston_rod = document.getElementById("piston_dia").value;
+                                var extension_checkpoint = document.getElementById("extension_check");
+                                var retraction_checkpoint = document.getElementById("retraction_check");
+                                if (piston_head.length <= 0 && extension_checkpoint.checked == true) {
+                                        alert("Enter valid input of Piston Dia")
+                                    }
+                                if (piston_rod.length <= 0 && retraction_checkpoint.checked == true && piston_head.length<=0) {
+                                        alert("Enter valid input of Piston Rod Dia")
+                                    }
+                                if (pressure_input.length <= 0) {
+                                    alert("Please Enter a valid pressure_input.")
+
+                                }
+                                if (extension_checkpoint.checked == true){
+                                    var ans = ((piston_head * 3.14 * piston_head)/4) * pressure_input;
+                                    if (retraction_checkpoint.checked==true){
+                                        var ans2 = (((piston_head * 3.14 * piston_head)/4) - ((piston_rod * 3.14 * piston_rod)/4)) * pressure_input;
+                                        var final_ans = "Extension Force = " + ans + "N\n" + "Retraction Force = " + ans2 +"N"
+                                        document.getElementById("force_ans").value=final_ans;
+                                    }
+                                    else{
+                                        document.getElementById("force_ans").value=ans+"N"
+                                    }
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                        Stepper Module
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <img class="img-fluid" src="stepper module.JPG" alt="" style="min-width: 400px; height: auto;">
+                        <img class="img-fluid" src="stepper circuit.JPG" alt="" style="min-width: 400px; height: auto;">
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                        Pneumatic Counter
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <img src="countercircuit.JPG" alt="" style="width: 400px; height: auto;">
+                        <p>
+                        <img class="img-fluid" src="counter.JPG" alt="">
+                        <ul style="list-style: none;">
+                            Counter Ports Number and their meaning
+                            <li>1 - Supply Pressure</li>
+                            <li>2 - OutPut Port</li>
+                            <li>12 - Pulse/Counter Port</li>
+                            <li>10 - Reset</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2017–2021 Engineer Point <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
