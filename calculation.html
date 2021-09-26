@@ -18,8 +18,8 @@
         input{
             margin: 2px;
             max-width: 200px;
-            min-width: 150px;
         }
+        
     </style>
 </head>
 
@@ -569,9 +569,9 @@
                             <div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Module</span>
-                                    <input id="pitch_m" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input style="min-width: 100px; height:30px; margin:2px;" id="pitch_m" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Numbers of gears</span>
-                                    <input id="pitch_z" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input style="min-width: 100px; height:30px; margin:2px;" id="pitch_z" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                     
                                 </div>
                                 <div>
@@ -592,11 +592,11 @@
                                 <li>df + 2(m+c)</li>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Root Dia</span>
-                                    <input id="pitch_rd" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input style="min-width: 100px; height:30px; margin:2px;" id="pitch_rd" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Module</span>
-                                    <input id="2pitch_m" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input style="min-width: 100px; height:30px; margin:2px;" id="2pitch_m" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Clearance</span>
-                                    <input id="pitch_c" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input style="min-width: 100px; height:30px; margin:2px;" id="pitch_c" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                 </div>
                                 <div>
                                     <button id="convert_pitch2" class="btn btn-success" onclick="rootplusmc()">Convert</button>
@@ -617,9 +617,9 @@
                                 <li>(p/3.14)*z</li>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Gear Pitch</span>
-                                    <input id="pitch_gp" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input style="min-width: 100px; height:30px; margin:2px;" id="pitch_gp" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Number of gears</span>
-                                    <input id="2pitch_z" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input style="min-width: 100px; height:30px; margin:2px;" id="2pitch_z" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                 </div>
                                 <div>
                                     <button id="convert_pitch3" class="btn btn-success" onclick="p_gearpitch()">Convert</button>
@@ -655,9 +655,9 @@
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Pitch Dia</span>
-                                <input id="add_p_dia" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                <input  style="min-width: 100px; height:30px; margin:2px;" id="add_p_dia" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Module</span>
-                                <input id="add_module" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                <input  style="min-width: 100px; height:30px; margin:2px;" id="add_module" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                             </div>
                             <div>
                                 <button id="convert_add1" class="btn btn-success" onclick="add_pit_mod()">Convert</button>
@@ -691,11 +691,11 @@
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Pitch Dia</span>
-                                <input id="rot_p_dia" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                <input  style="min-width: 100px; height:30px; margin:2px;" id="rot_p_dia" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Module</span>
-                                <input id="rot_module" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                <input  style="min-width: 100px; height:30px; margin:2px;" id="rot_module" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Clearance</span>
-                                <input id="rot_cle" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                <input  style="min-width: 100px; height:30px; margin:2px;" id="rot_cle" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                             </div>
                             <div>
                                 <button id="convert_root" class="btn btn-success" onclick="root_dia()">Convert</button>
@@ -734,7 +734,7 @@
                             <div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Module</span>
-                                    <input id="gp_module" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input  style="min-width: 100px; height:30px; margin:2px;" id="gp_module" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                 </div>
                                 <div>
                                     <button id="convert_gp" class="btn btn-success" onclick="gp_space1()">Calculate</button>
@@ -753,9 +753,9 @@
                                 <li>e+s</li>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Tooth Width</span>
-                                    <input id="gp_toothi" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input  style="min-width: 100px; height:30px; margin:2px;" id="gp_toothi" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Space between gears</span>
-                                    <input id="gp_space" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input  style="min-width: 100px; height:30px; margin:2px;" id="gp_space" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                 </div>
                                 <div>
                                     <button id="convert_gp2" class="btn btn-success" onclick="gp_space2()">Calculate</button>
@@ -791,9 +791,9 @@
                             <div>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Module</span>
-                                    <input id="td_mod" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input  style="min-width: 100px; height:30px; margin:2px;" id="td_mod" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Clearance</span>
-                                    <input id="td_cl" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input  style="min-width: 100px; height:30px; margin:2px;" id="td_cl" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                 </div>
                                 <div>
                                     <button id="convert_td1" class="btn btn-success" onclick="total_depth()">Calculate</button>
@@ -813,9 +813,9 @@
                                 <li>ha+hf</li>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Addendum</span>
-                                    <input id="td_add" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input  style="min-width: 100px; height:30px; margin:2px;" id="td_add" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                     <span class="input-group-text" id="inputGroup-sizing-default">Deddendum</span>
-                                    <input id="td_dded" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                    <input  style="min-width: 100px; height:30px; margin:2px;" id="td_dded" type="text" class="form-check-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                 </div>
                                 <div>
                                     <button id="convert_td2" class="btn btn-success" onclick="total_depth2()">Calculate</button>
