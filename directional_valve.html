@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>What are different types of direction control valve/directional valve?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://sachinyadav74.github.io/Electrical/Electrical/logo.ico" type = "image/x-icon">
+
+    <style>
+        *{
+            font-family: 'Padauk', sans-serif;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark fs-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">ENGINEER POINT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="mechanical.html">Mechanical</a></li>
+                            <li><a class="dropdown-item" href="electrical.html">Electrical</a></li>
+                            <li><a class="dropdown-item" href="hydraulics.html">Hydraulics</a></li>
+                            <li><a class="dropdown-item" href="pneumatics.html">Pneumatics</a></li>
+                            <li><a class="dropdown-item" href="electropneumatics.html">Electroneumatics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculation.html">Calculate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="questions.html">Ques&Ans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="max-width: 600px; height: auto;">
+        <div class="my-5">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-info">Direction Control Valve | Directional Valve</strong>
+                <h3 class="mb-0">What are different types of direction control valve/directional valve?</h3>
+                <div class="mb-1 text-muted">Oct 06</div>
+                <p class="mb-auto">Direction Control Valve change the flow of cmpressed air. In Pure pneumatics circuit they are used for signallng elements<strong>(pushbutton, detent switches, lever operated</strong>) and for controlling actuators.</p>
+                <p>They are mainly classified on basis of</p>
+                <a class="nav-link list-group-item" href="#ports"><li>Numbers of ports available for connection</li></a>
+                <a class="nav-link list-group-item" href="#positions"><li>Switching positions</li></a>
+                <a class="nav-link list-group-item" href="#home"><li>Home position</li></a>
+                <a class="nav-link list-group-item" href="#actuation"><li>Actuation method</li></a>
+            </div>
+            <h3 id="ports">Numbers of Ports</h3>
+            <div class="form-check">
+                <p>Valves have several terminal for input, output and exhaust. These terminals are called ports. Direction control valves can be classified on basis numbers of terminals used. 
+                    Some valves have 3 ports. Out of them 1 numbered port is always the input for compressed air. 2 numbered is putput and 3 numbered is exhaust. This is a standard followed in festo valves.
+                    Some have 5 ports. In such valves <strong>1</strong> is input for compressed air, <strong>(2,4)</strong> is for output, <strong>(3,5)</strong> is for exhaust. <strong>(10, 12)</strong> are used for changing positions.
+                </p>
+                <div>
+                    <img class="img-fluid" src="/valve numbering.jpg" alt="Valve Numbers">
+                    <img class="img-fluid" src="/valve numbering2.jpg" alt="Valve Numbers">
+                </div>
+                <ul>
+                    <li>1 - Supply input</li>
+                    <li>2,4 - Output</li>
+                    <li>3,5 - exhaust</li>
+                    <li>12, 14 - postion change</li>
+                </ul>
+            </div>
+            <h3 id="positions">Switching Positions</h3>
+            <div class="form-check">
+                <p>Switching positons defines numbers of positions available for changing position. In the below diagram</p>
+                <img class="img-fluid" src="/position_change.JPG" alt="two position Actuated Valve">  <!-- puchbutton image-->
+                <p>There are 2 positions available. Either valve can be at position <strong>(a)</strong> or at position <strong>(b)</strong>
+                When switch is operated the valve changes to position <strong>(a)</strong> and when released  it returns to positions <strong>(b)</strong></p>
+                <p>In below diagram there are 3 positions available. When X1 receives signal the valve changes to positions to <strong>(a)</strong>, when X2 recives signal <strong>(b)</strong> position is achieved.
+                    But when non of them receives signal then the valve position remains at <strong>(c)</strong> <p>
+                        <img class="img-fluid"src="/position_change2.JPG" alt="3 Position valve"> <!--img of 3 positipns-->
+            </div>
+
+            <h3 id="home">Home Position</h3>
+            <div class="row mb-3">
+                <p>When valve is not activated from any side, its default position is known as it's home positions. This position can be normally closed or normally opened. Even connected to tank in case of hydraulics.</p>
+                <div>
+                    <div>
+                        <figure>
+                            <img src="/home2.JPG" alt="Home Position normally closed">
+                            <figcaption>Normally Closed</figcaption>
+                        </figure>
+                    </div> 
+                    <div>
+                        <figure>
+                            <img src="/home1.JPG" alt="Home Position normallyopen">
+                            <figcaption>Normally Open</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+            <h3 id="actuation">Actuation Method</h3>
+            <div class="row mb-3">
+                <p>The valve actuation method is a major classification criteria. Actuation with pushbutton as shown below, the valve actuates when pushbutton is pressed.</p>
+                <p>It is spring loaded from another side, hence it returns to home position once released. <strong>Detent switch, lever operated, roller, one way trip lever</strong> are another types of valves actuated manually. </p>
+                <div>
+                    <img class="img-fluid"src="/actuation_method.JPG" alt="Different Actuation Method">
+                </div>
+                <p>Another method is <strong>pilot activated</strong>. The actuation which was mechanical is now pneumatically operated. When pneumatic air is supplied to their activating port the valve is operated. There are two ports for actuation while some have one. Valves with one pilot port are spring loaded to return to home position. Valves with two pilot ports are also known as memory valve as they remain in actuated port even after pilot port supply is off. When opposite pilot port recives signal then position is changed.</p>
+                <div>
+                    <img class="img-fluid"src="/pneumatic_actuation1.JPG" alt="Single Pilot">
+                    <img class="img-fluid"src="/pneumatic_actuation2.JPG" alt="Double Pilot">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2017–2021 Engineer Point <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
