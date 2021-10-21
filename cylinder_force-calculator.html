@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>How to calculate cylinder extension and retraction force? | With Pessure and Area</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://sachinyadav74.github.io/Electrical/Electrical/logo.ico" type="image/x-icon">
+
+    <style>
+        * {
+            font-family: 'Padauk', sans-serif;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark fs-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">ENGINEER POINT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="mechanical.html">Mechanical</a></li>
+                            <li><a class="dropdown-item" href="electrical.html">Electrical</a></li>
+                            <li><a class="dropdown-item" href="hydraulics.html">Hydraulics</a></li>
+                            <li><a class="dropdown-item" href="pneumatics.html">Pneumatics</a></li>
+                            <li><a class="dropdown-item" href="electropneumatics.html">Electroneumatics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculation.html">Calculate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="questions.html">Ques&Ans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="max-width: 600px; height: auto;">
+        <div class="my-5">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-info">Cylinder Force calculation</strong>
+                <h3 class="mb-0">How to calculate pneumatic cylinder force?</h3>
+                <div class="mb-1 text-muted">Oct 06</div>
+                <p class="mb-auto"> When compressed air is supplied to cylinder ports, it exerts some force on the
+                    piston and wall of cylinder. The wall is fixed but piston is free to move. That force exerted on
+                    piston causes it to move.</p>
+                <h4 class="my-2">To calculate cylinder extension force</h4>
+                <div class="form-check">
+                    <p class="mb-auto">We can calculate this force by using the cylinder piston and piston rod diamater
+                        and pressure available. To calculate we need to multiply pressure and area of piston. <strong>F
+                            = P * A</strong></p>
+                    <p class="mb-auto"> <strong>For example:</strong></p>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F(kg) = P(bar) * A(cm²)</p>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pressure (p) = 6bar</p>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;piston diameter (d) = 40mm</p>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F = p * a</p>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A = (π * d²)/4</p>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A = (π * 4²)/4</p>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A = 12.56cm²</p>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F = 6 * 12.56</p>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F = 75.39Kg = 753.9N</p>
+                    <p> <strong>753.9N</strong> of force is exerted on the cylinder piston. This means 75.39Kg of load can be lifted.(Here
+                        we have not considered efficiency. If we consider efficiency by 0.9 then 67Kg can be lifted.)
+                    </p>
+                    <p> <strong>The Force of cylinder to extend is greater than force of retraction.</strong> This is because while
+                        extending large area is available but during retraction that area gets subtracted by piston rod
+                        area as only that area is affected for backward movement of cylinder.</p>
+                </div>
+            </div>
+            <h4 class="my-2">To calculate retraction force</h4>
+            <div>
+                <p>To calculate retraction force we need to <strong>subtract piston rod diameter from piston diameter.</strong></p>
+                <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F(kg) = P(bar) * A(cm²)</p>
+                <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pressure (p) = 6bar</p>
+                <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;piston diameter (D) = 40mm</p>
+                <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;piston rod diameter (d) = 40mm</p>
+                <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F = p * a</p>
+                <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A = (π * (D²-d²)/4</p>
+                <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A = (π * 4²-2²)/2</p>
+                <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A = 9.42cm²</p>
+                <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F = 6 * 9.42</p>
+                <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F = 56.54Kg = 565.9N</p>
+                <p class="mb-auto">565.9N of force is available for retraction</p>
+            </div>
+        </div>
+
+        <h2>Pneumatic Cylinder Force Calculator</h2>
+        <div class="form-check">
+            <input class="form-check-input " type="checkbox" value="" id="extension_check">
+            <label class="form-check-label" for="extension_check">
+                Calculate Extension Force
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="retraction_check">
+            <label class="form-check-label" for="retraction_check">
+                Calculate Retraction Force
+            </label>
+        </div>
+        <div class="row mb-3">
+            <label for="pressure_input" class="col-sm-2 col-form-label">Pressure Input(bar)</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="pressure_input">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="piston_dia" class="col-sm-2 col-form-label">Piston Dia(mm)</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="piston_dia">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="piston_rod_dia" class="col-sm-2 col-form-label">Piston Rod Dia(mm)</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="piston_rod_dia">
+            </div>
+        </div>
+        <button type="button" onclick="calculate_force()" class="btn btn-success" id="calculate_vir">Calculate</button>
+        <div style="margin: 10px auto;">
+            <textarea class="h-50 d-inline-block" name="" id="force_ans"
+                style="resize: none; margin: 0px auto; width: 250px; height: 100px;"></textarea>
+        </div>
+        <script>
+            function calculate_force() {
+                var piston_head = document.getElementById("piston_dia").value;
+                var pressure_input = document.getElementById("pressure_input").value;
+                var piston_rod = document.getElementById("piston_rod_dia").value;
+                var extension_checkpoint = document.getElementById("extension_check");
+                var retraction_checkpoint = document.getElementById("retraction_check");
+                if (piston_head.length <= 0 && extension_checkpoint.checked == true) {
+                    alert("Enter valid input of Piston Dia")
+                }
+                if (piston_rod.length <= 0 && retraction_checkpoint.checked == true && piston_head.length <= 0) {
+                    alert("Enter valid input of Piston Rod Dia")
+                }
+                if (pressure_input.length <= 0) {
+                    alert("Please Enter a valid pressure_input.")
+                }
+                if (extension_checkpoint.checked == true) {
+                    var ans = (((piston_head * 0.1 * 0.1 * 3.14 * piston_head) / 4) * pressure_input).toFixed(2);
+                    if (retraction_checkpoint.checked == true) {
+                        var ans2 = ((((piston_head * 0.1 * 0.1 * 3.14 * piston_head) / 4) - ((piston_rod * 0.1 * 0.1 * 3.14 * piston_rod) / 4)) * pressure_input).toFixed(2);
+                        var final_ans = "Extension Force = " + (ans * 10) + "N\n" + "Retraction Force = " + ans2 + "N"
+                        document.getElementById("force_ans").value = final_ans;
+                    }
+                    else {
+                        ans1 = ans * 10;
+                        document.getElementById("force_ans").value = ans1 + "N"
+                    }
+                }
+                else if (retraction_checkpoint.checked == true && extension_checkpoint.checked == false) {
+                    if (piston_rod <= 0) {
+                        alert("Enter a valid Piston rod dia")
+                    }
+                    else if (piston_dia <= 0) {
+                        alert("Enter a valid Piston rod dia")
+                    }
+                    else {
+                        var ans = ((((piston_head * 0.1 * 0.1 * 3.14 * piston_head) / 4) - ((piston_rod * 0.1 * 0.1 * 3.14 * piston_rod) / 4)) * pressure_input).toFixed(2);
+                        ans1 = ans * 10;
+                        document.getElementById("force_ans").value = ans1 + "N";
+                    }
+                }
+            }
+        </script>
+        <div>
+            <a href="/directional_valve.html"><button type="button" class="btn btn-primary my-2">Directional Valve</button></a>
+            <a href="/pneumatic_valve.html"><button type="button" class="btn btn-primary my-2">Pneumatic Valves</button></a>
+            <a href="/hydraulics.html"><button type="button" class="btn btn-primary my-2">Hydraulics</button></a>
+            <a href="/mechanical.html"><button type="button" class="btn btn-primary my-2">Mechanical</button></a>
+            <a href="/electrical.html"><button type="button" class="btn btn-primary my-2">Electrical</button></a>
+            <a href="/electropneumatics.html"><button type="button" class="btn btn-primary my-2">Electropneumatics</button></a>
+        </div>
+    </div>
+
+    </div>
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2021–2022 Engineer Point <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
