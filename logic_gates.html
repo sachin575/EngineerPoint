@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Different Logic Gates like And Gate, OR Gate & Not Gate and Their Truth Table</title>
+    <meta name="description" content="Logic Gates like And gate, OR Gate, NOT Gate and their truth table in detail.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://sachinyadav74.github.io/Electrical/Electrical/logo.ico" type="image/x-icon">
+
+    <style>
+        * {
+            font-family: 'Padauk', sans-serif;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark fs-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">ENGINEER POINT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="mechanical.html">Mechanical</a></li>
+                            <li><a class="dropdown-item" href="electrical.html">Electrical</a></li>
+                            <li><a class="dropdown-item" href="hydraulics.html">Hydraulics</a></li>
+                            <li><a class="dropdown-item" href="pneumatics.html">Pneumatics</a></li>
+                            <li><a class="dropdown-item" href="electropneumatics.html">Electroneumatics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculation.html">Calculate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="questions.html">Ques&Ans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="max-width: 600px; height: auto;">
+        <div class="my-5">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-info">Logical Gates</strong>
+                <h3 class="mb-0">What are different types of Logical gate and their truth table?</h3>
+                <div class="mb-1 text-muted">Oct 28</div>
+                <p class="mb-auto">Logic Gates play important role in defining circuit processing. They are deciding
+                    factor whether circuit generate output or not. Different logical operators like AND gate, OR gate
+                    and NOT Gate are main logical operators.</p>
+                <h4 class="my-2">And Gate</h4>
+                <div class="form-check">
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In AND Gate, When all inputs are high at the
+                        same time only then output is generated. All input values most br high ie. 1 to get output
+                        generated.</p>
+                    <img src="and_gate_lg.png" class="img-fluid" alt="And Gate Logical FBD Diagram">
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let I1 and I2 be two inputs connected in AND
+                        logic and Q1 be the output. Normally, both inputs are Low (0) and Q1 output is low. When I1 and
+                        I2 both are high(1) simultaneously, the output Q1 is High. If any one of them (I1 & I2) is low
+                        then Q1 is low.</p>
+                        <p class="mb-auto"> <strong>Truth Table for AND Gate</strong></p>
+                        
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">I1</th>
+                                <th scope="col">I2</th>
+                                <th scope="col">Q1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h4 class="my-2">OR Gate</h4>
+                <div class="form-check">
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In OR gate when any one input among any two or more input, is high then output is generated. Any input should be high if output is to be generated.</p>
+                    <img src="or_gate_lg.png" class="img-fluid" alt="OR Gate Logical FBD Diagram">
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let I1 & I2 are two input & connected to Q1. Here normally when all are 0, then Q1 is o. But if any of them is high at any instance than output is generated or output becomes High(1). If more then 1 input are high at the same time than also Q1 will be high.</p>
+                    <p><strong>Truth Table for OR Gate</strong></p>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">I1</th>
+                                <th scope="col">I2</th>
+                                <th scope="col">Q1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h4 class="my-2">NOT Gate</h4>
+                <div class="form-check">
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In not gate when any input is high the output is set to low. All inputs values must be 0 to get output high.</p>
+                    <img src="not_gate_lg.jpg" class="img-fluid" alt="NOT Gate Logical FBD Diagram">
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let I1 be input with not gate connected to Q1. Now, normally inputs are low, that means theres no any signal at point I1 output is high. If I1 is high then output is low.</p>
+                    <p><strong>Truth Table For NOT Gate</strong></p>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">I1</th>
+                                <th scope="col">Q1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Now lets consider NAND gate and NOR gate.</p>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In NOR gate all inputs are connected to NOR gate logic. This means whenerver any input is high negation will be applied and then output will be low. In normal condition, if all inputs are low then output will be high. And if any input is high then output will be low. Such Logic gate is called NOR Gate.</p>
+                    <img src="nor_gate_lg.jpg" class="img-fluid" alt="NOR Gate Logical FBD Diagram">
+                    <p><strong>Truth Table for NOR Gate</strong></p>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">I1</th>
+                                <th scope="col">I2</th>
+                                <th scope="col">I3</th>
+                                <th scope="col">Q1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mb-auto">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In AND gate all inputs are connected to NAND gate. Whenever all inputs are high, output will be low. If only one input is low then output will still remain high. Such logic gates are called as NAND Gate.</p>
+                    <p><strong>Truth Table for NAND Gate</strong></p>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">I1</th>
+                                <th scope="col">I2</th>
+                                <th scope="col">I3</th>
+                                <th scope="col">Q1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <img src="nand_gate_lg.jpg" class="img-fluid" alt="NAND Gate Logical FBD Diagram">
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href="/directional_valve.html"><button type="button" class="btn btn-primary my-2">Directional
+                Valve</button></a>
+                <a href="/pneumatic_valve.html"><button type="button" class="btn btn-primary my-2">Pneumatic
+                    Valves</button></a>
+            <a href="/hydraulics.html"><button type="button" class="btn btn-primary my-2">Hydraulics</button></a>
+            <a href="/mechanical.html"><button type="button" class="btn btn-primary my-2">Mechanical</button></a>
+            <a href="/electrical.html"><button type="button" class="btn btn-primary my-2">Electrical</button></a>
+            <a href="/electropneumatics.html"><button type="button"
+                class="btn btn-primary my-2">Electropneumatics</button></a>
+                <a href="/cylinder_force_calculator.html"><button type="button" class="btn btn-primary my-2">Cylinder Force
+                    Calculator</button></a>
+                </div>
+    </div>
+    
+</div>
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2021–2022 Engineer Point <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
