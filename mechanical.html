@@ -75,53 +75,18 @@
     </div>
     
     <div class="container" style="max-width: 600px; height: auto;">
-        <div class="accordion my-5" id="accordionExample">
-            <div class="accordion-item" id="Tolerance">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTolerance" aria-expanded="false" aria-controls="collapseTwo">
-                        Tolerance
-                    </button>
-                </h2>
-                <div id="collapseTolerance" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <h3>How to calculate Tolerance?</h3>
-                        <strong>Tolerance itself means scope of deviation in dimension. </strong>It sepecifies what can
-                        be the maximun and
-                        minimum
-                        deviation for a given dimension. Tolerance has a upper deviation limit and lower deviation
-                        limit.
-                        With
-                        that we can specify a upper dimension i.e what can be the maximum dimension and lower dimension
-                        i.e.
-                        what can be the minimum dimension. For example. 25±0.2mm. Here we have upper deviation of 0.2mm
-                        and
-                        lower deviation of 0.2mm. So we can now calculate 25+0.2=25.2mm is the upperlimit of the
-                        dimesion
-                        gievn.
-                        Now 25-0.2=24.8mm is the lower limit. Now we can calculate Tolerance. It is Upper limit - Lower
-                        limit.
-                        i.e. 25.2 - 24.8=0.4mm is the tolerance. There are standard tables specified by ISO standard for
-                        tolerance classes. Now that you
-                        have
-                        understood the tolerance calculation, with the help of calculator given below find out the
-                        tolerance
-                        you
-                        want.
-                        <p class="my-2">In ISO standard <strong> DIN ISO 286-2 (1990-11)</strong>,here some tolerance
-                            class defined with every
-                            dimension.
-                            eg 20 H6, here 20 is nominal
-                            dimension and H6 is tolerance class. The maximum and minimum
-                            deviation
-                            for H6 is +0.013 and minimum is 0. It means you have to maintain the workpiece between
-                            20.000 to
-                            20.013.
-                        </p>
-                    </div>
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card" id="Tolerance">
+                <div class="card-body">
+                  <h5 class="card-title">Tolerance</h5>
+                  <p class="card-text">Tolerance itself means scope of deviation in dimension. </strong>It sepecifies what can be the maximun and minimum deviation for a given dimension. Tolerance has a upper deviation limit and lower deviation limit.</p>
+                  <a href="#" class="text-decoration-none">Continue Reading</a>
                 </div>
+              </div>
             </div>
+        </div>
+        <div class="accordion my-5" id="accordionExample">
             <div class="accordion-item" id="Fits">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
