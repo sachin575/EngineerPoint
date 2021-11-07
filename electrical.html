@@ -73,6 +73,21 @@
         </div> 
     </div>
     <div class="container" style="max-width: 600px; height: auto;">
+        <div class="col-md-6 px-0">
+            <p>Hello all !!! <br>
+                I welcome you all to Engineer Point Electrical page. Here you can learn many different topics
+                related to Electrical study. You will come across topics like <a class="text-decoration-none"
+                    class="text-decoration-none" href="#basic_wiring">Logical
+                    Electrical Wirings</a>, <a class="text-decoration-none" class="text-decoration-none"
+                    href="#ohms_law">Ohms Law</a>, <a href="/logic_gates.html" class="text-decoration-none">Logical
+                    Circuit</a>,
+                <a class="text-decoration-none" class="text-decoration-none" href="#collapsesafety class="
+                    text-decoration-none" ">Electrical Safety</a>, <a class=" text-decoration-none"
+                    href="#MCB_RCD">Safety Devices</a> all topics related questions and many more. Make sure you read
+                all topics you are instrested in. And get
+                your problem solved very soon.
+            </p>
+        </div>
         <div class="accordion my-5" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
@@ -162,126 +177,6 @@
                     </div>
                 </div>
 
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseDrilling" aria-expanded="false" aria-controls="collapseTwo" id="ohms_law">Ohm's Law
-                    </button>
-                </h2>
-                <div id="collapseDrilling" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <div>
-                            <p>Ohms law states that the current through a conductor between two points is directly
-                                proportional
-                                to
-                                the voltage across the two points.</p>
-                        </div>
-                        <div>
-                            <h3>
-                                Voltage, Current, Resistance calculator
-                            </h3>
-                            <h4>Select What you want to find</h4>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="voltage_check">
-                                <label class="form-check-label" onclick="voltage_checked()" for="voltage_check">
-                                    Voltage
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="current_check">
-                                <label class="form-check-label" onclick="current_checked()" for="current_check">
-                                    Current
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="resistance_check">
-                                <label class="form-check-label" onclick="resistance_checked()" for="resistance_check">
-                                    Resistance
-                                </label>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="voltage" class="col-sm-2 col-form-label">Voltage</label>
-                                <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="voltage">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="current" class="col-sm-2 col-form-label">Current</label>
-                                <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="current">
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label for="resistance" class="col-sm-2 col-form-label">Resistance</label>
-                                <div class="col-sm-10">
-                                    <input type="number" class="form-control" id="resistance">
-                                </div>
-                            </div>
-                            <button type="button" onclick="vir_calculation()" class="btn btn-success"
-                                id="calculate_vir">Calculate</button>
-                            <div style="margin: 10px auto;">
-
-                                <textarea name="" id="vir_answer" class="rpm_cal" cols="20" rows="2"
-                                    style="resize: none; margin: 0px auto;"></textarea>
-                            </div>
-                        </div>
-                        <script>
-                            function vir_calculation() {
-                                var resistance = document.getElementById("resistance").value;
-                                var voltage = document.getElementById("voltage").value;
-                                var current = document.getElementById("current").value;
-                                var voltage_check = document.getElementById("voltage_check");
-                                var current_check = document.getElementById("current_check");
-                                var resistance_check = document.getElementById("resistance_check");
-                                if (voltage_check.checked == true) {
-                                    if (current.length <= 0 | resistance.length <= 0) {
-                                        alert("Please Enter a valid current and resistance number.")
-                                    }
-                                    else {
-                                        var ans = current * resistance
-                                        document.getElementById("vir_answer").value = ans + "V"
-                                    }
-                                }
-                                if (current_check.checked == true) {
-                                    if (resistance.length <= 0 && voltage.length <= 0) {
-                                        alert("Please Enter a valid resistance and voltage number.")
-                                    }
-                                    else {
-                                        var ans = voltage / resistance;
-                                        document.getElementById("vir_answer").value = ans + "A"
-                                    }
-                                };
-                                if (resistance_check.checked == true) {
-                                    if (current.length <= 0 && voltage.length <= 0) {
-                                        alert("Please Enter a valid current and voltage number.")
-                                    }
-                                    else {
-                                        var ans = voltage / current;
-                                        document.getElementById("vir_answer").value = ans + "ohm"
-                                    }
-                                };
-                            }
-                            function resistance_checked() {
-                                document.getElementById("resistance").disabled = true;
-                                document.getElementById("voltage").disabled = false;
-                                document.getElementById("current").disabled = false;
-                            }
-                            function current_checked() {
-                                document.getElementById("resistance").disabled = false;
-                                document.getElementById("voltage").disabled = false;
-                                document.getElementById("current").disabled = true;
-                            }
-                            function voltage_checked() {
-                                document.getElementById("resistance").disabled = false;
-                                document.getElementById("voltage").disabled = true;
-                                document.getElementById("current").disabled = false;
-                            }
-                        </script>
-                    </div>
-                </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
