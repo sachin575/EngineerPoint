@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Ohm's Law Calculator | Engineer Point</title>
+    <meta name="description"
+        content="Ohm's Law equation and voltage, current and resistance proportionality on each other.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://sachinyadav74.github.io/Electrical/Electrical/logo.ico" type="image/x-icon">
+
+    <style>
+        * {
+            font-family: 'Padauk', sans-serif;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark fs-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">ENGINEER POINT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="mechanical.html">Mechanical</a></li>
+                            <li><a class="dropdown-item" href="electrical.html">Electrical</a></li>
+                            <li><a class="dropdown-item" href="hydraulics.html">Hydraulics</a></li>
+                            <li><a class="dropdown-item" href="pneumatics.html">Pneumatics</a></li>
+                            <li><a class="dropdown-item" href="electropneumatics.html">Electroneumatics</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculation.html">Calculate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="questions.html">Ques&Ans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="max-width: 600px; height: auto;">
+        <div class="my-5">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-info">Circuits</strong>
+                <h3 class="mb-0">Logical Circuit | <a href="#ohms_law_calculator"
+                        class="text-decoration-none">Simple,</a> <a href="#ohms_law_calculator"
+                        class="text-decoration-none">Dependent,</a> <a href="#ohms_law_calculator"
+                        class="text-decoration-none">Interlock,</a> <a href="#ohms_law_calculator"
+                        class="text-decoration-none">Latching</a> </h3>
+                <div class="mb-1 text-muted">Nov 07</div>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In automation circuit output
+                    Signal are depended on different input & interlocks . For example there is a conveyor having door at
+                    its end. The conveyor should not start as long as the door is closed. When door is open the conveyor
+                    receives the Signal for actuation then only conveyors should start. Such circuit is dependent. The
+                    conveyor is depended door input signal.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lets take another example,
+                    suppose there is a motor which rotates clockwise and anticlockwise. But
+                    if motor is rolating clockwise and when signal for anticlockwise is received, the motor should not
+                    start rotating anticlockwise. Motor should keep rotating clockwise. And if motor is rotating
+                    anticlockwise it should not
+                    rotate clockwise even if button for clockwise is pressed. Such circuit is called interlock circuit.
+                    Lets make such circuit.</p>
+            </div>
+            <h3 id="rimple_circuit">Simple Circuit</h3>
+            <div class="form-check">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simple circuits are very easy
+                    to understand. There is a 24V supply with a pushbutton and lamp connected. Initialy the circuit is
+                    open. When pushbutton is pressed then circuit is closed and lamp lights up.
+                </p>
+                <img src="/EngineerPoint-main/basicbutton.JPG" class="img-fluid" alt="Simple Circuit With Pushbutton">
+            </div>
+            <h3 id="relay_circuit">Relay Circuit</h3>
+            <div class="form-check">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In relay circuit a pushbutton
+                    is connected to relay and auxilary contacts are used to connect bulb or any other load.
+                    Here when pushbutton <strong>(S1 or S2)</strong> is pressed. Relay <strong>(K1 or K2)</strong> is
+                    activated Parallely the relays contact is used. The Normally open contact closes and lamp lights up.
+                </p>
+                <img src="/EngineerPoint-main/basic with contactors.JPG" class="img-fluid"
+                    alt="Relay Circuit With Pushbutton">
+            </div>
+            <h3 id="dependent_circuit">Dependent Circuit</h3>
+            <div class="form-check">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In dependent circuit when
+                    first condition is achived only then the another step is activated. For example, Here when lamp
+                    lights up only then motor will start. One No contact is connected in series to the circuit of relay
+                    that will be activating motor. </p>
+                <img src="/EngineerPoint-main/dependent_circuit_electrical.jpg" class="img-fluid"
+                    alt="Relay Circuit With Pushbutton">
+            </div>
+            <h3 id="interlock_circuit">Interlock Circuit</h3>
+            <div class="form-check">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In interlock circuit, if one
+                    step is active another step does not get executed, One Normally Closed contact of initial step is
+                    connected in series. Due to this when step one is active it's relay's NC contact opens, and
+                    disconnects the supply to relay of another circuit.</p>
+                <img src="/EngineerPoint-main/intertlock.JPG" class="img-fluid" alt="Relay Circuit With Pushbutton">
+            </div>
+            <h3 id="interlock_circuit">Latching Circuit</h3>
+            <div class="form-check">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Suppose you have a normally
+                    open pushbutton, relay and a lamp Now you want that when you preess button lamp should glow and when
+                    you release button the lamp should still remain on. In that case latching is used. for example in
+                    below circuit if button S1 is pressed relay gets activated and when S2 is pressed lamp gets off.
+                
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A parallel NO contact of relay is connected to relay's A1 port with a NC button between to switch
+                    off the circuit. when pushbutton is pressed supply go from S1 to S2 to A1 of relay. From K1(3,4) supply goes to
+                    k1's A1 port. Hence, the relay remains latched. By pressing S2, Supply is turned off and relay is
+                    deactivated.</p>
+                <img src="/EngineerPoint-main/latching.JPG" class="img-fluid" alt="Relay Circuit With Pushbutton">
+            </div>
+            <div>
+                <a href="/directional_valve.html"><button type="button" class="btn btn-primary my-2">Directional
+                        Valve</button></a>
+                <a href="/pneumatic_valve.html"><button type="button" class="btn btn-primary my-2">Pneumatic
+                        Valves</button></a>
+                <a href="/hydraulics.html"><button type="button" class="btn btn-primary my-2">Hydraulics</button></a>
+                <a href="/mechanical.html"><button type="button" class="btn btn-primary my-2">Mechanical</button></a>
+                <a href="/electrical.html"><button type="button" class="btn btn-primary my-2">Electrical</button></a>
+                <a href="/electropneumatics.html"><button type="button"
+                        class="btn btn-primary my-2">Electropneumatics</button></a>
+                <a href="/cylinder_force_calculator.html"><button type="button" class="btn btn-primary my-2">Cylinder
+                        Force
+                        Calculator</button></a>
+                <a href="/logic_gates.html" class="text-decoration-none"><button type="button"
+                        class="btn btn-primary my-2">Logical Circuit</button></a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2017–2021 Engineer Point <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
